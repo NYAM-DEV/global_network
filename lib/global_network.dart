@@ -6,11 +6,11 @@ export 'package:global_network/utils/export.dart';
 
 class GlobalNetwork extends StatelessWidget {
   final Widget child;
-  final Displaytype type;
-  final Widget errorScreen;
+  final Displaytype? type;
+  final Widget? errorScreen;
 
   const GlobalNetwork(
-      {Key key, @required this.child, this.type, this.errorScreen})
+      {required Key key, required this.child, this.type, this.errorScreen})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

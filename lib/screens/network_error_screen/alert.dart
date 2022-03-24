@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 class NoNetworkAlert extends StatefulWidget {
   final Widget child;
 
-  const NoNetworkAlert({Key key, @required this.child}) : super(key: key);
+  const NoNetworkAlert({required Key key, required this.child}) : super(key: key);
   @override
   _NoNetworkAlertState createState() => _NoNetworkAlertState();
 }
 
 class _NoNetworkAlertState extends State<NoNetworkAlert> {
   dialog() {
-    return WidgetsBinding.instance.addPostFrameCallback((_) async {
+    return WidgetsBinding.instance?.addPostFrameCallback((_) async {
       await showDialog<String>(
         context: context,
         barrierDismissible: false,

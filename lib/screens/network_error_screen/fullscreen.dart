@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Nonetwork extends StatefulWidget {
   final Widget errorScreen;
 
-  const Nonetwork({Key key, this.errorScreen}) : super(key: key);
+  const Nonetwork({required Key key, required this.errorScreen}) : super(key: key);
   @override
   _NonetworkState createState() => _NonetworkState();
 }
@@ -24,9 +24,9 @@ class _NonetworkState extends State<Nonetwork> {
                           end: Alignment.bottomCenter,
                           colors: [
                         Colors.blue,
-                        Colors.blue[400],
-                        Colors.blue[300],
-                        Colors.blue[200]
+                        Colors.blueAccent,
+                        Colors.blueGrey,
+                        Colors.lightBlueAccent
                       ])),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

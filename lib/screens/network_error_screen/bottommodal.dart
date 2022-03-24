@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class NoNetworkModalBottomSheet extends StatefulWidget {
   final Widget child;
 
-  const NoNetworkModalBottomSheet({Key key, @required this.child})
+  const NoNetworkModalBottomSheet({required Key key, required this.child})
       : super(key: key);
   @override
   _NoNetworkModalBottomSheetState createState() =>
@@ -12,7 +12,7 @@ class NoNetworkModalBottomSheet extends StatefulWidget {
 
 class _NoNetworkModalBottomSheetState extends State<NoNetworkModalBottomSheet> {
   dialog() {
-    return WidgetsBinding.instance.addPostFrameCallback((_) async {
+    return WidgetsBinding.instance?.addPostFrameCallback((_) async {
       await showModalBottomSheet(
           useRootNavigator: true,
           isDismissible: false,

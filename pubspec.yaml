@@ -5,13 +5,13 @@ version: 0.1.4
 homepage: https://github.com/anki2jain/global_network
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.16.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  connectivity: ^0.4.8+2
-  provider: ^4.0.4
+  connectivity: ^3.0.6
+  provider: ^6.0.2
 
 dev_dependencies:
   flutter_test:

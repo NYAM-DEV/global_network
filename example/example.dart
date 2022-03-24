@@ -5,6 +5,7 @@ class Example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlobalNetwork(
+      key: Key('GlobalNetwork'),
       child: Scaffold(
         appBar: AppBar(title: Text("Global Network")),
         body: Center(child: Text("Network Connection Available")),

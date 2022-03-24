@@ -5,7 +5,7 @@ import 'dart:ui';
 class NoNetworkBottomSheet extends StatefulWidget {
   final Widget child;
 
-  const NoNetworkBottomSheet({Key key, @required this.child}) : super(key: key);
+  const NoNetworkBottomSheet({required Key key, required this.child}) : super(key: key);
   @override
   _NoNetworkBottomSheetState createState() => _NoNetworkBottomSheetState();
 }

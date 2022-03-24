@@ -6,11 +6,11 @@ import '../enums/connectivity_status.dart';
 
 class NetworkSensitive extends StatelessWidget {
   final Widget child;
-  final Displaytype type;
-  final Widget errorScreen;
+  final Displaytype? type;
+  final Widget? errorScreen;
 
   NetworkSensitive({
-    @required this.child,
+    required this.child,
     this.type,
     this.errorScreen,
   });
@@ -28,20 +28,29 @@ class NetworkSensitive extends StatelessWidget {
     }
 
     if (type == Displaytype.alertBox) {
-      return NoNetworkAlert(child: child);
+      return NoNetworkAlert(
+          key: Key('NoNetworkAlert'),
+      child: child);
     }
 
     if (type == Displaytype.bottomModalSheet) {
-      return NoNetworkModalBottomSheet(child: child);
+      return NoNetworkModalBottomSheet(
+          key: Key('NoNetworkModalBottomSheet'),
+      child: child);
     }
 
     if (type == Displaytype.bottomSheet) {
-      return NoNetworkBottomSheet(child: child);
-    }
-    if (type == Displaytype.fullscreen) {
-      return Nonetwork(errorScreen: errorScreen);
+      return NoNetworkBottomSheet(
+          key: Key('NoNetworkBottomSheet'),
+      child: child);
     }
 
-    return Nonetwork();
+    if (type == Displaytype.fullscreen) {
+      return Nonetwork(
+        errorScreen: errorScreen!,
+        key: Key('Nonetwork'),);
+    }
+
+    return Nonetwork(key: Key('Nonetwork'), errorScreen: SizedBox(),);
   }
 }

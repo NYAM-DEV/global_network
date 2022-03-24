@@ -6,6 +6,7 @@ import 'package:global_network/utils/export.dart';
 void main() {
   test('adds one to input values', () {
     final test = GlobalNetwork(
+      key: Key('GlobalNetwork'),
       child: Text("Testing"),
     );
     // final calculator = GlobalNetwork();
